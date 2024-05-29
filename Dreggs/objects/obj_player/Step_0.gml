@@ -59,3 +59,13 @@ if (keyboard_check(ord("A"))) {
 else if (keyboard_check(ord("D"))) {
    playerFacing = 0;
 }
+
+
+// Change the sprite of obj_task1 when within a certain distance and E is pressed
+var obj = instance_nearest(x, y, obj_task1); // Get the nearest instance of obj_task1
+var dist = point_distance(x, y, obj.x, obj.y); // Calculate distance to that instance
+
+if (keyboard_check_pressed(ord("E")) && dist <= 50) {
+    obj.sprite_index = spr_dogBowlFull; // Change the sprite
+    show_debug_message("Sprite changed to spr_dogBowlFull");
+}

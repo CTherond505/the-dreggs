@@ -20,7 +20,7 @@ function scr_blackScreen(_bool){
 			obj_blackScreen.image_alpha -= 0.01;
 			if (obj_blackScreen.image_alpha == 0)
 			{
-				obj_blackScreen.fading = false;
+				obj_blackScreen.fading = true;
 			}
 		}
 	}

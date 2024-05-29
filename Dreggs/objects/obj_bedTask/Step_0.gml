@@ -5,6 +5,7 @@ if (obj_player.x < x + 128 and obj_player.x > x - 128)
 		if (keyboard_check(ord("E")) == 1)
 		{
 			obj_dayManager.endDay = true;
+			obj_blackScreen.fading = true;
 		}
 	}
 }

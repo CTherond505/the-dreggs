@@ -55,31 +55,31 @@ if (!waiting) {
 }
 
 
-if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task1.x, obj_task1.y) <= 50 && !waiting && task1_complete = false) {
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task1.x, obj_task1.y) <= 50 && !waiting && global.task1_complete = false) {
     // Start waiting period
     waiting = true;
     // Move progress bar above player's head
     progressBar.x = obj_task1.x;
     progressBar.y = obj_task1.y - 64;
-	task1_complete = true;
+	global.task1_complete = true;
 }
 
-if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task2.x, obj_task2.y) <= 50 && !waiting && task2_complete = false) {
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task2.x, obj_task2.y) <= 50 && !waiting && global.task2_complete = false) {
     // Start waiting period
     waiting = true;
     // Move progress bar above player's head
     progressBar.x = obj_task2.x;
     progressBar.y = obj_task2.y - 64;
-	task2_complete = true;
+	global.task2_complete = true;
 }
 
-if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task3.x, obj_task3.y) <= 50 && !waiting && task3_complete = false) {
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task3.x, obj_task3.y) <= 50 && !waiting && global.task3_complete = false) {
     // Start waiting period
     waiting = true;
     // Move progress bar above player's head
     progressBar.x = obj_task3.x;
     progressBar.y = obj_task3.y - 64;
-	task3_complete = true;
+	global.task3_complete = true;
 }
 
 // Waiting period controls
@@ -91,14 +91,17 @@ if (waiting = true) {
 		waitTimer = 22;
 		progressBar.y = y - 3200;
 		
-		if (task1_complete = true){    
+		if (global.task1_complete = true){    
 			obj_task1.sprite_index = spr_dogBowlFull;
+			global.task1_completeGUI = true;
 		}
-		if (task2_complete = true){    
+		if (global.task2_complete = true){    
 			obj_task2.y = y - 640;
+			global.task2_completeGUI = true;
 		}
-		if (task3_complete = true){    
+		if (global.task3_complete = true){    
 			obj_task3.y = y - 640;
+			global.task3_completeGUI = true;
 		}
     }
 	else{

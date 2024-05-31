@@ -13,6 +13,9 @@ waitTimer = 60;
 
 
 
-task1_complete = false;
-task2_complete = false;
-task3_complete = false;
+global.task1_complete = false;
+global.task1_completeGUI = false;
+global.task2_complete = false;
+global.task2_completeGUI = false;
+global.task3_complete = false;
+global.task3_completeGUI = false;

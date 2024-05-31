@@ -15,6 +15,7 @@
     {"id":{"name":"spr_dogBowl","path":"sprites/spr_dogBowl/spr_dogBowl.yy",},"order":0,},
     {"id":{"name":"obj_task2","path":"objects/obj_task2/obj_task2.yy",},"order":1,},
     {"id":{"name":"spr_progressBar","path":"sprites/spr_progressBar/spr_progressBar.yy",},"order":4,},
+    {"id":{"name":"obj_taskGUI","path":"objects/obj_taskGUI/obj_taskGUI.yy",},"order":4,},
     {"id":{"name":"spr_dogBowlFull","path":"sprites/spr_dogBowlFull/spr_dogBowlFull.yy",},"order":1,},
     {"id":{"name":"obj_task4","path":"objects/obj_task4/obj_task4.yy",},"order":3,},
     {"id":{"name":"rm_street","path":"rooms/rm_street/rm_street.yy",},"order":3,},

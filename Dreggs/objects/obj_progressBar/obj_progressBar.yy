@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_task3",
+  "name": "obj_progressBar",
   "spriteId": {
-    "name": "spr_pills",
-    "path": "sprites/spr_pills/spr_pills.yy",
+    "name": "spr_progressBar",
+    "path": "sprites/spr_progressBar/spr_progressBar.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Tasks",
-    "path": "folders/Objects/Tasks.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
 }

@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_task2",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_puddle",
+    "path": "sprites/spr_puddle/spr_puddle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

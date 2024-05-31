@@ -1,71 +1,107 @@
-key_right = keyboard_check(ord("D"));
-key_left = keyboard_check(ord("A"));
+// Reference to the existing progress bar in the room
+var progressBar = obj_progressBar;
 
-key_up = keyboard_check(ord("W"));
-key_down = keyboard_check(ord("S"));
-
-if (key_right - key_left == 0)
-{
-	currentXSpeed *= deccel; 
-}
-else
-{
-	currentXSpeed += (key_right - key_left) * accel;
-}
-
-if (key_down - key_up == 0)
-{
-	currentYSpeed *= deccel;
-}
-else
-{
-	currentYSpeed += (key_down - key_up) * accel;
-}
-
-if (abs(currentXSpeed) > maxSpeed)
-{
-	currentXSpeed = maxSpeed * sign(currentXSpeed);	
-}
-
-if (abs(currentYSpeed) > maxSpeed)
-{
-	currentYSpeed = maxSpeed * sign(currentYSpeed);	
-}
-
-if ( keyboard_check_pressed(ord("A")))
-{
-	image_xscale = -1;	
-}
-
-if ( keyboard_check_pressed(ord("D")))
-{
-	image_xscale = 1;	
-}
-
-if (place_free(x + currentXSpeed, y))
-{
-	x += currentXSpeed;
-}
-
-if (place_free(x, y + currentYSpeed))
-{
-	y += currentYSpeed;
-}
+// Movement controls
+var key_right = keyboard_check(ord("D"));
+var key_left = keyboard_check(ord("A"));
+var key_up = keyboard_check(ord("W"));
+var key_down = keyboard_check(ord("S"));
 
 
-if (keyboard_check(ord("A"))) {
-   playerFacing = 180;
-} 
-else if (keyboard_check(ord("D"))) {
-   playerFacing = 0;
+
+// Only allow movement if not waiting
+if (!waiting) {
+    if (key_right - key_left == 0) {
+        currentXSpeed *= deccel;
+    } else {
+        currentXSpeed += (key_right - key_left) * accel;
+    }
+
+    if (key_down - key_up == 0) {
+        currentYSpeed *= deccel;
+    } else {
+        currentYSpeed += (key_down - key_up) * accel;
+    }
+
+    if (abs(currentXSpeed) > maxSpeed) {
+        currentXSpeed = maxSpeed * sign(currentXSpeed);
+    }
+
+    if (abs(currentYSpeed) > maxSpeed) {
+        currentYSpeed = maxSpeed * sign(currentYSpeed);
+    }
+
+    if (keyboard_check_pressed(ord("A"))) {
+        image_xscale = -1;
+    }
+
+    if (keyboard_check_pressed(ord("D"))) {
+        image_xscale = 1;
+    }
+
+    if (place_free(x + currentXSpeed, y)) {
+        x += currentXSpeed;
+    }
+
+    if (place_free(x, y + currentYSpeed)) {
+        y += currentYSpeed;
+    }
+
+    if (keyboard_check(ord("A"))) {
+        playerFacing = 180;
+    } else if (keyboard_check(ord("D"))) {
+        playerFacing = 0;
+    }
 }
 
 
-// Change the sprite of obj_task1 when within a certain distance and E is pressed
-var obj = instance_nearest(x, y, obj_task1); // Get the nearest instance of obj_task1
-var dist = point_distance(x, y, obj.x, obj.y); // Calculate distance to that instance
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task1.x, obj_task1.y) <= 50 && !waiting && task1_complete = false) {
+    // Start waiting period
+    waiting = true;
+    // Move progress bar above player's head
+    progressBar.x = obj_task1.x;
+    progressBar.y = obj_task1.y - 64;
+	task1_complete = true;
+}
 
-if (keyboard_check_pressed(ord("E")) && dist <= 50) {
-    obj.sprite_index = spr_dogBowlFull; // Change the sprite
-    show_debug_message("Sprite changed to spr_dogBowlFull");
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task2.x, obj_task2.y) <= 50 && !waiting && task2_complete = false) {
+    // Start waiting period
+    waiting = true;
+    // Move progress bar above player's head
+    progressBar.x = obj_task2.x;
+    progressBar.y = obj_task2.y - 64;
+	task2_complete = true;
+}
+
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task3.x, obj_task3.y) <= 50 && !waiting && task3_complete = false) {
+    // Start waiting period
+    waiting = true;
+    // Move progress bar above player's head
+    progressBar.x = obj_task3.x;
+    progressBar.y = obj_task3.y - 64;
+	task3_complete = true;
+}
+
+// Waiting period controls
+if (waiting = true) {
+    // Decrease the wait timer
+    if (waitTimer <= 0) {
+        // End waiting period
+        waiting = false;
+		waitTimer = 22;
+		progressBar.y = y - 3200;
+		
+		if (task1_complete = true){    
+			obj_task1.sprite_index = spr_dogBowlFull;
+		}
+		if (task2_complete = true){    
+			obj_task2.y = y - 640;
+		}
+		if (task3_complete = true){    
+			obj_task3.y = y - 640;
+		}
+    }
+	else{
+		waitTimer --;
+	}
 }

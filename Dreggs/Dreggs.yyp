@@ -5,6 +5,7 @@
   "resources": [
     {"id":{"name":"obj_progressBar","path":"objects/obj_progressBar/obj_progressBar.yy",},"order":4,},
     {"id":{"name":"spr_pills","path":"sprites/spr_pills/spr_pills.yy",},"order":3,},
+    {"id":{"name":"fnt_tasks","path":"fonts/fnt_tasks/fnt_tasks.yy",},"order":1,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_bedTask","path":"objects/obj_bedTask/obj_bedTask.yy",},"order":3,},
     {"id":{"name":"fnt_story","path":"fonts/fnt_story/fnt_story.yy",},"order":0,},

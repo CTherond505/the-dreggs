@@ -1,3 +1,46 @@
-function scr_displayStory(text){
-
+function scr_displayStory(day){
+	if (day == 2)
+	{
+		obj_textBox.text = "BIG MEETING IN 7 MORE DAYS\ntoday was nice";
+	}
+	else if (day == 3)
+	{
+		obj_textBox.text = "that really hurt";
+	}
+	else if (day == 4)
+	{
+		obj_textBox.text = "these pills are making quite a difference";
+	}
+	else if (day == 5)
+	{
+		obj_textBox.text = "i should take some more pills when i wake up";
+	}
+	else if (day == 6)
+	{
+		obj_textBox.text = "i need to take more pills tomorrow";
+	}
+	else if (day == 7)
+	{
+		obj_textBox.text = "i cant believe i lost my job, where will i live?";
+	}
+	else if (day == 8)
+	{
+		obj_textBox.text = "";
+	}
+	else if (day == 9)
+	{
+		obj_textBox.text = "";
+	}
+	else if (day == 10)
+	{
+		obj_textBox.text = "";
+	}
+	else if (day == 11)
+	{
+		obj_textBox.text = "";
+	}
+	else if (day == 12)
+	{
+		obj_textBox.text = "";
+	}
 }

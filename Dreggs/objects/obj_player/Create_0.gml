@@ -10,7 +10,7 @@ deccel = 0.2;
 // Variable to track waiting state
 waiting = false;
 waitTimer = 60;
-
+depth = -1;
 
 
 global.task1_complete = false;

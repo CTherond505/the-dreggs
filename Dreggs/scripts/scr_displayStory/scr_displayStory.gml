@@ -1,7 +1,8 @@
 function scr_displayStory(day){
+	instance_create_layer(400, 400, "Story", obj_textBox);
 	if (day == 2)
 	{
-		obj_textBox.text = "BIG MEETING IN 7 MORE DAYS\ntoday was nice";
+		obj_textBox.text = "BIG MEETING IN 7 MORE DAYS\n\ntoday was nice";
 	}
 	else if (day == 3)
 	{
@@ -21,7 +22,7 @@ function scr_displayStory(day){
 	}
 	else if (day == 7)
 	{
-		obj_textBox.text = "i cant believe i lost my job, where will i live?";
+		obj_textBox.text = "i cant believe i lost my job,\n\n where will i live?";
 	}
 	else if (day == 8)
 	{

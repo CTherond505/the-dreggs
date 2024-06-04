@@ -21,7 +21,6 @@ if (endDay == true)
 		}
 		if (alarmRun = false and fadeOut == false)
 		{
-			instance_create_layer(122, 200, "Story", obj_textBox);
 			scr_displayStory(day);
 			alarm[0] = room_speed * 5;
 			alarmRun = true;

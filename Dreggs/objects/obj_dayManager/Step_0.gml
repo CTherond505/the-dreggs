@@ -7,9 +7,9 @@ if (endDay == true)
 	}
 	else if (obj_blackScreen.fading == false)
 	{
-		if (day == lastDay)
+		if (global.day == lastDay)
 		{
-			day += 1;
+			global.day += 1;
 		}
 		// text function
 		show_debug_message("waiting");
@@ -21,7 +21,7 @@ if (endDay == true)
 		}
 		if (alarmRun = false and fadeOut == false)
 		{
-			scr_displayStory(day);
+			scr_displayStory(global.day);
 			alarm[0] = room_speed * 5;
 			alarmRun = true;
 		}
@@ -32,7 +32,7 @@ if (endDay == true)
 		fadeOut = false;
 		faded = false;
 		lastDay += 1;
-		scr_nextDay(day);
+		scr_nextDay(global.day);
 		obj_blackScreen.fading = false;
 		endDay = false;
 	}

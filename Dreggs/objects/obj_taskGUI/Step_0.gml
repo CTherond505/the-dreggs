@@ -20,3 +20,9 @@ if (global.task3_completeGUI == true) {
 else if (global.task3_completeGUI == false) {
 	task3 = "Take your painkillers. "
 }
+if (global.task4_completeGUI == true) {
+    task4 = "";
+}
+else if (global.task4_completeGUI == false) {
+	task4 = "Go to work. "
+}

@@ -8,3 +8,4 @@ draw_set_valign(fa_top);
 draw_text(100, 70, string(task1));
 draw_text(100, 50, string(task2));
 draw_text(100, 30, string(task3));
+draw_text(100, 10, string(task4));

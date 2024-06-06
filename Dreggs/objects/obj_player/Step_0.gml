@@ -7,7 +7,8 @@ var key_left = keyboard_check(ord("A"));
 var key_up = keyboard_check(ord("W"));
 var key_down = keyboard_check(ord("S"));
 
-
+// Adjust the speed if task 3 is not completed
+var speedMultiplier = global.task3_complete ? 1 : 0.25;
 
 // Only allow movement if not waiting
 if (!waiting) {
@@ -23,12 +24,12 @@ if (!waiting) {
         currentYSpeed += (key_down - key_up) * accel;
     }
 
-    if (abs(currentXSpeed) > maxSpeed) {
-        currentXSpeed = maxSpeed * sign(currentXSpeed);
+    if (abs(currentXSpeed) > maxSpeed * speedMultiplier) {
+        currentXSpeed = maxSpeed * speedMultiplier * sign(currentXSpeed);
     }
 
-    if (abs(currentYSpeed) > maxSpeed) {
-        currentYSpeed = maxSpeed * sign(currentYSpeed);
+    if (abs(currentYSpeed) > maxSpeed * speedMultiplier) {
+        currentYSpeed = maxSpeed * speedMultiplier * sign(currentYSpeed);
     }
 
     if (keyboard_check_pressed(ord("A"))) {
@@ -54,57 +55,67 @@ if (!waiting) {
     }
 }
 
-
-if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task1.x, obj_task1.y) <= 50 && !waiting && global.task1_complete = false) {
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task1.x, obj_task1.y) <= 50 && !waiting && global.task1_complete == false) {
     // Start waiting period
     waiting = true;
     // Move progress bar above player's head
     progressBar.x = obj_task1.x;
-    progressBar.y = obj_task1.y - 64;
-	global.task1_complete = true;
+    progressBar.y = obj_task1.y - 30;
+    global.task1_complete = true;
 }
 
-if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task2.x, obj_task2.y) <= 50 && !waiting && global.task2_complete = false) {
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task2.x, obj_task2.y) <= 50 && !waiting && global.task2_complete == false) {
     // Start waiting period
     waiting = true;
     // Move progress bar above player's head
     progressBar.x = obj_task2.x;
-    progressBar.y = obj_task2.y - 64;
-	global.task2_complete = true;
+    progressBar.y = obj_task2.y - 30;
+    global.task2_complete = true;
 }
 
-if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task3.x, obj_task3.y) <= 50 && !waiting && global.task3_complete = false) {
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task3.x, obj_task3.y) <= 50 && !waiting && global.task3_complete == false) {
     // Start waiting period
     waiting = true;
-    // Move progress bar above player's head
+    // Move progress bar above tasks
     progressBar.x = obj_task3.x;
-    progressBar.y = obj_task3.y - 64;
-	global.task3_complete = true;
+    progressBar.y = obj_task3.y-30;
+    global.task3_complete = true;
+}
+
+if (keyboard_check_pressed(ord("E")) && point_distance(x, y, obj_task4.x, obj_task4.y) <= 50 && !waiting && global.task4_complete == false) {
+    // Start waiting period
+    waiting = true;
+    // Move progress bar above tasks
+    progressBar.x = obj_task4.x;
+    progressBar.y = obj_task4.y-30;
+    global.task4_complete = true;
 }
 
 // Waiting period controls
-if (waiting = true) {
+if (waiting == true) {
     // Decrease the wait timer
     if (waitTimer <= 0) {
         // End waiting period
         waiting = false;
-		waitTimer = 22;
-		progressBar.y = y - 3200;
-		
-		if (global.task1_complete = true){    
-			obj_task1.sprite_index = spr_dogBowlFull;
-			global.task1_completeGUI = true;
-		}
-		if (global.task2_complete = true){    
-			obj_task2.y = y - 640;
-			global.task2_completeGUI = true;
-		}
-		if (global.task3_complete = true){    
-			obj_task3.y = y - 640;
-			global.task3_completeGUI = true;
-		}
+        waitTimer = 22;
+        progressBar.y = y - 3200;
+        
+        if (global.task1_complete == true) {    
+            obj_task1.sprite_index = spr_dogBowlFull;
+            global.task1_completeGUI = true;
+        }
+        if (global.task2_complete == true) {    
+            obj_task2.y = y - 640;
+            global.task2_completeGUI = true;
+        }
+        if (global.task3_complete == true) {    
+            global.task3_completeGUI = true;
+        }
+        if (global.task4_complete == true) {    
+            spr_desk.image_index = 1;
+            global.task4_completeGUI = true;
+        }
+    } else {
+        waitTimer--;
     }
-	else{
-		waitTimer --;
-	}
 }

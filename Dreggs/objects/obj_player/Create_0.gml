@@ -17,5 +17,10 @@ global.task1_complete = false;
 global.task1_completeGUI = false;
 global.task2_complete = false;
 global.task2_completeGUI = false;
-global.task3_complete = false;
-global.task3_completeGUI = false;
+global.task3_complete = true;
+global.task3_completeGUI = true;
+global.task4_complete = false;
+global.task4_completeGUI = false;
+
+var new_instance = instance_create_layer(x-1000, y, layer, obj_progressBar);
+new_instance.depth = -1000;

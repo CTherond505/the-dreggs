@@ -112,7 +112,7 @@ if (waiting == true) {
             global.task3_completeGUI = true;
         }
         if (global.task4_complete == true) {    
-            spr_desk.image_index = 1;
+            obj_task4.image_index = 1;
             global.task4_completeGUI = true;
         }
     } else {

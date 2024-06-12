@@ -8,7 +8,8 @@ deccel = 0.2;
 
 // State variables
 waiting = false;
-waitTimer = 60;
+global.waitTimer = 60;
+global.waitTimerReset = 60
 depth = -1;
 
 // Task completion flags

@@ -98,7 +98,7 @@ if (keyboard_check_pressed(ord("E"))) {
 
 // Waiting period controls
 if (waiting) {
-    if (waitTimer <= 0) {
+    if (global.waitTimer <= 0) {
         // End waiting period
         progressBar.y = y - 3200;
 
@@ -118,10 +118,10 @@ if (waiting) {
             global.task4_completeGUI = true;
         }
 		waiting = false;
-        waitTimer = 22;
+		global.waitTimer = global.waitTimerReset;
     } 
 	else {
-        waitTimer--;
+        global.waitTimer--;
     }
 }
 

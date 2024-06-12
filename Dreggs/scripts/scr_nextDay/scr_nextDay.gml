@@ -35,7 +35,7 @@ function scr_nextDay(_day){
 		global.task4_complete = false;
 		global.task4_completeGUI = false;
 	}
-	if (_day == 7)
+	if (_day == 8)
 	{
 		room_goto(rm_street);
 	}

@@ -25,15 +25,28 @@ if (global.day == 4) {
     }
 }
 
-// Additional condition for day 4 to reset task3 once if any task is complete
+
 if (global.day == 4) {
+    if ((global.task1_complete && global.task2_complete) && !global.task3_reset_day4) {
+        global.task3_complete = false;
+        global.task3_reset_day4 = true;
+    }
+}
+
+
+if (global.day == 5) {
     if ((global.task1_complete || global.task2_complete || global.task4_complete) && !global.task3_reset_day4) {
         global.task3_complete = false;
         global.task3_reset_day4 = true;
     }
 }
 
-// Existing code
-if (global.task1_complete && global.task2_complete && global.task4_complete && global.day == 4) {
+
+if ((global.task1_complete && global.task2_complete) && global.day == 4) {
     global.task3_complete = false;
 }
+
+if ((global.task1_complete && global.task2_complete && global.task4_complete) && global.day == 5 || global.day == 6 || global.day == 7) {
+    global.task3_complete = false;
+}
+

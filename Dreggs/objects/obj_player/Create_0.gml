@@ -21,7 +21,7 @@ global.task3_completeGUI = true;
 global.task4_complete = false;
 global.task4_completeGUI = false;
 global.allTasksComplete = false;
-
+global.otherTasksComplete = false
 // Speed reduction variables
 speedMultiplier = 1;
 reductionRate = 0.001;

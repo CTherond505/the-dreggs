@@ -85,7 +85,7 @@ if (keyboard_check_pressed(ord("E"))) {
         progressBar.x = obj_task3.x;
         progressBar.y = obj_task3.y - 30;
         global.task3_complete = true;
-    } else if (point_distance(x, y, obj_task4.x, obj_task4.y) <= 50 && !waiting && !global.task4_complete) {
+    } else if (point_distance(x, y, obj_task4.x, obj_task4.y) <= 50 && !waiting && !global.task4_complete && global.otherTasksComplete) {
         // Start waiting period
         waiting = true;
         // Move progress bar above task
@@ -125,3 +125,4 @@ if (waiting) {
 
 // Check if all tasks are complete
 global.allTasksComplete = global.task1_complete && global.task2_complete && global.task3_complete && global.task4_complete;
+global.otherTasksComplete = global.task1_complete && global.task2_complete && global.task3_completeGUI;

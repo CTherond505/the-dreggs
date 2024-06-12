@@ -23,6 +23,7 @@ if (endDay == true)
 		{
 			scr_displayStory(global.day);
 			alarm[0] = room_speed * 5;
+			scr_nextDay(global.day);
 			alarmRun = true;
 		}
 	}
@@ -32,7 +33,6 @@ if (endDay == true)
 		fadeOut = false;
 		faded = false;
 		lastDay += 1;
-		scr_nextDay(global.day);
 		obj_blackScreen.fading = false;
 		endDay = false;
 	}

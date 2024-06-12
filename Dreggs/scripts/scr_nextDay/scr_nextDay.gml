@@ -13,5 +13,9 @@ function scr_nextDay(_day){
 	{
 		// change speed things once speed implimented
 	}
+	if (_day == 7)
+	{
+		room_goto(rm_street);
+	}
 	// etc
 }

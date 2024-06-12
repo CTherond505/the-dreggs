@@ -91,6 +91,7 @@ if (keyboard_check_pressed(ord("E"))) {
         // Move progress bar above task
         progressBar.x = obj_task4.x;
         progressBar.y = obj_task4.y - 30;
+		speedMultiplier = 1;
         global.task4_complete = true;
     }
 }
@@ -99,8 +100,6 @@ if (keyboard_check_pressed(ord("E"))) {
 if (waiting) {
     if (waitTimer <= 0) {
         // End waiting period
-        waiting = false;
-        waitTimer = 22;
         progressBar.y = y - 3200;
 
         if (global.task1_complete) {
@@ -118,11 +117,14 @@ if (waiting) {
             obj_task4.image_index = 1;
             global.task4_completeGUI = true;
         }
-    } else {
+		waiting = false;
+        waitTimer = 22;
+    } 
+	else {
         waitTimer--;
     }
 }
 
 // Check if all tasks are complete
-global.allTasksComplete = global.task1_complete && global.task2_complete && global.task3_complete && global.task4_complete;
+global.allTasksComplete = global.task1_completeGUI && global.task2_completeGUI && global.task3_completeGUI && global.task4_completeGUI;
 global.otherTasksComplete = global.task1_complete && global.task2_complete && global.task3_completeGUI;

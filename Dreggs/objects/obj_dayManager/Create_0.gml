@@ -1,5 +1,5 @@
-global.day = 5;
-lastDay = 5;
+global.day = 1;
+lastDay = 1;
 faded = false;
 endDay = false;
 fadeOut = false;

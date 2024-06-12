@@ -22,8 +22,8 @@ if (endDay == true)
 		if (alarmRun = false and fadeOut == false)
 		{
 			scr_displayStory(global.day);
-			alarm[0] = room_speed * 5;
 			scr_nextDay(global.day);
+			alarm[0] = room_speed * 5;
 			alarmRun = true;
 		}
 	}

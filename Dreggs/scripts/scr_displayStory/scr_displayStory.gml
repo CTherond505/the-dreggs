@@ -2,7 +2,7 @@ function scr_displayStory(day){
 	instance_create_layer(400, 400, "Story", obj_textBox);
 	if (day == 1)
 	{
-
+	
 	}
 	if (day == 2)
 	{

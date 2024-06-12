@@ -5,5 +5,5 @@
 
 if (!global.task4_complete)
 {
-	spr_desk.image_index = 0;
+	image_index = 0;
 }

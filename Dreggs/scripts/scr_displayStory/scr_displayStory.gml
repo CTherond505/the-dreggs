@@ -22,6 +22,7 @@ function scr_displayStory(day){
 	}
 	else if (day == 3)
 	{
+		global.pillsTaken = false;
 		global.waitTimer = 75
 		global.waitTimerReset = 75
 		obj_textBox.text = "As you were getting ready for bed,\n\nyou tripped and badly messed up your back.\n\nYou ended up in hospital for 3 days";
@@ -36,7 +37,8 @@ function scr_displayStory(day){
 	}
 	else if (day == 4)
 	{
-		global.waitTimer = 90
+		global.waitTimer = 90;
+		global.pillsTaken = false;
 		global.waitTimerReset = 90;
 		obj_textBox.text = "BIG MEETING IN 3 DAYS\n\nthese pills are making quite a difference";
 		global.task1_complete = false;
@@ -50,6 +52,7 @@ function scr_displayStory(day){
 	}
 	else if (day == 5)
 	{
+		global.pillsTaken = false;
 		global.waitTimerReset = 120;
 		global.waitTimer = 120;
 		obj_textBox.text = "BIG MEETING IN 2 DAYS\n\nI should take some more pills when i wake up";

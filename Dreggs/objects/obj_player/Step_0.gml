@@ -8,7 +8,7 @@ var key_up = keyboard_check(ord("W"));
 var key_down = keyboard_check(ord("S"));
 
 // Adjust the speed if task 4 is not completed
-if (!global.task3_complete) {
+if (!global.pillsTaken) {
     speedMultiplier -= reductionRate;
     if (speedMultiplier < 0.1) {
         speedMultiplier = 0.1;
@@ -85,17 +85,24 @@ if (keyboard_check_pressed(ord("E"))) {
         progressBar.x = obj_task3.x;
         progressBar.y = obj_task3.y - 30;
         global.task3_complete = true;
+		global.pillsTaken = true;
     } else if (point_distance(x, y, obj_task4.x, obj_task4.y) <= 50 && !waiting && !global.task4_complete && global.otherTasksComplete) {
         // Start waiting period
         waiting = true;
         // Move progress bar above task
         progressBar.x = obj_task4.x;
         progressBar.y = obj_task4.y - 30;
-		speedMultiplier = 1;
         global.task4_complete = true;
     }
+	else if (point_distance(x, y, obj_task3.x, obj_task3.y) <= 50 && !waiting && !global.pillsTaken) {
+        // Start waiting period
+        waiting = true;
+        // Move progress bar above task
+        progressBar.x = obj_task3.x;
+        progressBar.y = obj_task3.y - 30;
+		global.pillsTaken = true;
+	}
 }
-
 // Waiting period controls
 if (waiting) {
     if (global.waitTimer <= 0) {

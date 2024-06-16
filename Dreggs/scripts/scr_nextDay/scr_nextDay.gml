@@ -35,6 +35,19 @@ function scr_nextDay(_day){
 		global.task4_complete = false;
 		global.task4_completeGUI = false;
 	}
+	if (_day = 7)
+	{
+		obj_timer.timeLeft = 30;
+		obj_timer.run = true;
+		global.task1_complete = false;
+		global.task1_completeGUI = false;
+		global.task2_complete = false;
+		global.task2_completeGUI = false;
+		global.task3_complete = false;
+		global.task3_completeGUI = false;
+		global.task4_complete = false;
+		global.task4_completeGUI = false;
+	}
 	if (_day == 8)
 	{
 		room_goto(rm_street);

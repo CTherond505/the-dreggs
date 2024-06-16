@@ -60,8 +60,7 @@ function scr_displayStory(day){
 	}
 	else if (day == 7)
 	{
-		obj_textBox.text = "BIG MEETING TODAY\n I've already got a bad rep, I cant miss it";
-		
+		obj_textBox.text = "BIG MEETING TODAY\n\nI've already got a bad rep, I cant miss it";
 	}
 	else if (day == 8)
 	{

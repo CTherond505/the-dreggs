@@ -9,10 +9,17 @@ var key_down = keyboard_check(ord("S"));
 
 // Adjust the speed if task 4 is not completed
 if (!global.pillsTaken) {
-    speedMultiplier -= reductionRate;
-    if (speedMultiplier < 0.1) {
-        speedMultiplier = 0.1;
-    }
+	if speedMultiplier >= 0.6
+	{
+		speedMultiplier -= (reductionRate * 2);
+	}
+	else
+	{
+		speedMultiplier -= (reductionRate / 2);
+		if (speedMultiplier < 0.2) {
+			speedMultiplier = 0.2;
+		}
+	} 
 } else {
     speedMultiplier = 1;
 }
@@ -20,15 +27,15 @@ if (!global.pillsTaken) {
 // Only allow movement if not waiting
 if (!waiting) {
     if (key_right - key_left == 0) {
-        currentXSpeed *= deccel;
+        currentXSpeed = 0;
     } else {
-        currentXSpeed += (key_right - key_left) * accel;
+        currentXSpeed += (key_right - key_left);
     }
 
     if (key_down - key_up == 0) {
-        currentYSpeed *= deccel;
+        currentYSpeed = 0;
     } else {
-        currentYSpeed += (key_down - key_up) * accel;
+        currentYSpeed += (key_down - key_up);
     }
 
     if (abs(currentXSpeed) > maxSpeed * speedMultiplier) {
@@ -40,11 +47,11 @@ if (!waiting) {
     }
 
     if (place_free(x + currentXSpeed, y)) {
-        x += currentXSpeed;
+        x += currentXSpeed / 2;
     }
 
     if (place_free(x, y + currentYSpeed)) {
-        y += currentYSpeed;
+        y += currentYSpeed / 2;
     }
 
     if (keyboard_check(ord("A"))) {

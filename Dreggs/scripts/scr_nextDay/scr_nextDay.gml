@@ -37,7 +37,7 @@ function scr_nextDay(_day){
 	}
 	if (_day = 7)
 	{
-		obj_timer.timeLeft = 30;
+		obj_timer.timeLeft = 15;
 		obj_timer.run = true;
 		global.task1_complete = false;
 		global.task1_completeGUI = false;

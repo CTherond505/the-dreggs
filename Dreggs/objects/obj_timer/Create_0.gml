@@ -1,7 +1,7 @@
-timeLeft = 30;
+timeLeft = 15;
 run = false;
 canAlarm = true;
-text = "time until meeting: " + string(timeLeft);
+text = "time until meeting: \n" + string(timeLeft);
 boxWidth = sprite_get_width(spr_timerBox);
 stringHeight = string_height(text);
 fading = false;

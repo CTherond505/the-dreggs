@@ -39,14 +39,6 @@ if (!waiting) {
         currentYSpeed = maxSpeed * speedMultiplier * sign(currentYSpeed);
     }
 
-    if (keyboard_check_pressed(ord("A"))) {
-        image_xscale = -1;
-    }
-
-    if (keyboard_check_pressed(ord("D"))) {
-        image_xscale = 1;
-    }
-
     if (place_free(x + currentXSpeed, y)) {
         x += currentXSpeed;
     }
@@ -105,6 +97,7 @@ if (keyboard_check_pressed(ord("E"))) {
 }
 // Waiting period controls
 if (waiting) {
+	sprite_index = spr_idle;
     if (global.waitTimer <= 0) {
         // End waiting period
         progressBar.y = y - 3200;
@@ -135,3 +128,24 @@ if (waiting) {
 // Check if all tasks are complete
 global.allTasksComplete = global.task1_completeGUI && global.task2_completeGUI && global.task3_completeGUI && global.task4_completeGUI;
 global.otherTasksComplete = global.task1_complete && global.task2_complete && global.task3_completeGUI;
+
+if (currentXSpeed > 0)
+{
+	sprite_index = spr_walkRight;
+}
+else if (currentXSpeed < 0)
+{
+	sprite_index = spr_walkLeft;
+}
+else if (currentYSpeed > 0)
+{
+	sprite_index = spr_walkDown;
+}
+else if (currentYSpeed < 0)
+{
+	sprite_index = spr_walkUp;
+}
+else
+{
+	sprite_index = spr_idle;
+}

@@ -6,3 +6,4 @@ boxWidth = sprite_get_width(spr_timerBox);
 stringHeight = string_height(text);
 fading = false;
 depth = -3;
+ran = false;

@@ -35,5 +35,6 @@ if (endDay == true)
 		lastDay += 1;
 		obj_blackScreen.fading = false;
 		endDay = false;
+		obj_player.speedMultiplier = 1;
 	}
 }

@@ -19,6 +19,7 @@ global.task2_complete = false;
 global.task2_completeGUI = false;
 global.task3_complete = true;
 global.task3_completeGUI = true;
+global.pillsTaken = true;
 global.task4_complete = false;
 global.task4_completeGUI = false;
 global.allTasksComplete = false;

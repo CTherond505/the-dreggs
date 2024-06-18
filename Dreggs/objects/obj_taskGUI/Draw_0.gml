@@ -9,3 +9,4 @@ draw_text(x, y + 70, string(task1));
 draw_text(x, y + 50, string(task2));
 draw_text(x, y + 30, string(task3));
 draw_text(x, y + 10, string(task4));
+draw_text(x, y - 10, string(task5));

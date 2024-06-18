@@ -26,3 +26,9 @@ if (global.task4_completeGUI == true) {
 else if (global.task4_completeGUI == false) {
 	task4 = "Go to work. "
 }
+if (global.task5_completeGUI == true) {
+    task5 = "";
+}
+else if (global.task5_completeGUI == false) {
+	task5 = "Have a bath. "
+}

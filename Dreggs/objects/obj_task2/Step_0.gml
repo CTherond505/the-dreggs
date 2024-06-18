@@ -8,8 +8,7 @@ if (!global.task2_complete)
 	x = 670
 	y = 200
 }
-
-if (global.task2_complete)
+else
 {
 	x = 1000
 }

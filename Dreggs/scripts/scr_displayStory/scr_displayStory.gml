@@ -1,5 +1,6 @@
 function scr_displayStory(day){
 	instance_create_layer(400, 400, "Story", obj_textBox);
+	obj_textBox.depth = -10001
 	if (day == 1)
 	{
 	global.waitTimer = 60
@@ -17,6 +18,8 @@ function scr_displayStory(day){
 		global.task3_completeGUI = true;
 		global.task4_complete = false;
 		global.task4_completeGUI = false;
+		global.task5_complete = false;
+		global.task5_completeGUI = false;
 		
 		obj_textBox.text = "BIG MEETING IN 7 MORE DAYS\n\nI should fix that leaky sink";
 	}
@@ -34,6 +37,8 @@ function scr_displayStory(day){
 		global.task3_completeGUI = false;
 		global.task4_complete = false;
 		global.task4_completeGUI = false;
+		global.task5_complete = false;
+		global.task5_completeGUI = false;
 	}
 	else if (day == 4)
 	{
@@ -49,6 +54,8 @@ function scr_displayStory(day){
 		global.task3_completeGUI = false;
 		global.task4_complete = false;
 		global.task4_completeGUI = false;
+		global.task5_complete = false;
+		global.task5_completeGUI = false;
 	}
 	else if (day == 5)
 	{

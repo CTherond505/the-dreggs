@@ -1,4 +1,4 @@
-timeLeft = 15;
+timeLeft = 30;
 run = false;
 canAlarm = true;
 text = "time until meeting: \n" + string(timeLeft);

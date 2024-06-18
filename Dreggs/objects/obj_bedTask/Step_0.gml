@@ -9,3 +9,7 @@ if (obj_player.x < x + 128 and obj_player.x > x - 128)
 		}
 	}
 }
+if (global.day > 7)
+{
+	sprite_index = spr_trashBags;
+}

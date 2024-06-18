@@ -43,6 +43,7 @@ function scr_nextDay(_day){
 	{
 		obj_timer.timeLeft = 30;
 		obj_timer.run = true;
+		obj_timer.image_alpha = 0.5;
 		global.task1_complete = false;
 		global.task1_completeGUI = false;
 		global.task2_complete = false;
@@ -57,30 +58,29 @@ function scr_nextDay(_day){
 	if (_day == 8)
 	{
 		room_goto(rm_street);
-		global.task1_complete = false;
-		global.task1_completeGUI = false;
-		global.task2_complete = false;
-		global.task2_completeGUI = false;
+		global.task1_complete = true;
+		global.task1_completeGUI = true;
+		global.task2_complete = true;
+		global.task2_completeGUI = true;
 		global.task3_complete = false;
 		global.task3_completeGUI = false;
-		global.task4_complete = false;
-		global.task4_completeGUI = false;
-		global.task5_complete = false;
-		global.task5_completeGUI = false;
+		global.task4_complete = true;
+		global.task4_completeGUI = true;
+		global.task5_complete = true;
+		global.task5_completeGUI = true;
 	}
 	if (_day == 9)
 	{
-		room_goto(rm_street);
-		global.task1_complete = false;
-		global.task1_completeGUI = false;
-		global.task2_complete = false;
-		global.task2_completeGUI = false;
+		global.task1_complete = true;
+		global.task1_completeGUI = true;
+		global.task2_complete = true;
+		global.task2_completeGUI = true;
 		global.task3_complete = false;
 		global.task3_completeGUI = false;
-		global.task4_complete = false;
-		global.task4_completeGUI = false;
-		global.task5_complete = false;
-		global.task5_completeGUI = false;
+		global.task4_complete = true;
+		global.task4_completeGUI = true;
+		global.task5_complete = true;
+		global.task5_completeGUI = true;
 	}
 	
 }

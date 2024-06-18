@@ -204,3 +204,8 @@ if (currentXSpeed > 0) {
 } else {
     sprite_index = spr_idle;
 }
+
+if (global.day == 12)
+{
+	y = 1500;
+}

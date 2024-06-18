@@ -74,7 +74,7 @@ function scr_displayStory(day){
 	}
 	else if (day == 8)
 	{
-		obj_textBox.text = "You were late to the meeting and got fired,\n\nwith no money for rent you move to the streets";
+		obj_textBox.text = "You were late to the meeting and got fired,\n\nwith no money for rent you move\nto the streets";
 	}
 	else if (day == 9)
 	{

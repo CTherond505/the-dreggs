@@ -3,3 +3,4 @@ boxWidth = sprite_get_width(spr_textBox);
 stringHeight = string_height(text);
 fading = false;
 depth = -3;
+image_alpha = 0;

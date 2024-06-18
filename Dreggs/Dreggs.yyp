@@ -67,6 +67,7 @@
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},"order":1,},
     {"id":{"name":"obj_task3","path":"objects/obj_task3/obj_task3.yy",},"order":2,},
     {"id":{"name":"rm_street","path":"rooms/rm_street/rm_street.yy",},"order":5,},
+    {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},"order":10,},
     {"id":{"name":"obj_backButton","path":"objects/obj_backButton/obj_backButton.yy",},"order":4,},
     {"id":{"name":"spr_taskMenu","path":"sprites/spr_taskMenu/spr_taskMenu.yy",},"order":4,},
     {"id":{"name":"spr_middleTopLeftBench","path":"sprites/spr_middleTopLeftBench/spr_middleTopLeftBench.yy",},"order":22,},

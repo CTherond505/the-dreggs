@@ -3,7 +3,7 @@
 
 
 
-if (!global.task2_complete)
+if (!global.task2_complete && room = rm_house)
 {
 	x = 670
 	y = 200
@@ -11,4 +11,6 @@ if (!global.task2_complete)
 else
 {
 	x = 1000
+	global.task2_complete = true
+	global.task2_completeGUI = true
 }

@@ -11,5 +11,5 @@ if (timeLeft <= 0 and ran == false)
 	obj_dayManager.endDay = true;
 	obj_blackScreen.fading = true;
 	ran = true;
-	instance_destroy();
+	instance_destroy(self);
 }

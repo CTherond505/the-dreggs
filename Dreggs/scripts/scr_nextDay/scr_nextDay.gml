@@ -58,8 +58,8 @@ function scr_nextDay(_day){
 	if (_day == 8)
 	{
 		room_goto(rm_street);
-		global.task1_complete = true;
-		global.task1_completeGUI = true;
+		global.task1_complete = false;
+		global.task1_completeGUI = false;
 		global.task2_complete = true;
 		global.task2_completeGUI = true;
 		global.task3_complete = false;
@@ -71,8 +71,8 @@ function scr_nextDay(_day){
 	}
 	if (_day == 9)
 	{
-		global.task1_complete = true;
-		global.task1_completeGUI = true;
+		global.task1_complete = false;
+		global.task1_completeGUI = false;
 		global.task2_complete = true;
 		global.task2_completeGUI = true;
 		global.task3_complete = false;
@@ -81,6 +81,21 @@ function scr_nextDay(_day){
 		global.task4_completeGUI = true;
 		global.task5_complete = true;
 		global.task5_completeGUI = true;
+	}
+	if (_day == 10)
+	{
+		global.task1_complete = false;
+		global.task1_completeGUI = false;
+	}
+	if (_day == 11)
+	{
+		global.task1_complete = false;
+		global.task1_completeGUI = false;
+	}
+	if (_day == 12)
+	{
+		global.task1_complete = false;
+		global.task1_completeGUI = false;
 	}
 	
 }

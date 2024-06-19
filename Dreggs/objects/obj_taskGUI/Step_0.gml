@@ -4,8 +4,11 @@
 if (global.task1_completeGUI == true) {
     task1 = "";
 }
-else if (global.task1_completeGUI == false) {
+else if (global.task1_completeGUI == false && room=rm_house) {
 	task1 = "Feed the dog. "
+}
+else if (global.task1_completeGUI == false && room=rm_street) {
+	task1 = "Eat. "
 }
 
 if (global.task2_completeGUI == true) {

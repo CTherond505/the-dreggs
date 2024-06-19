@@ -12,3 +12,7 @@ if (!global.task1_complete)
 }
 
 
+if (room = rm_street)
+{
+	sprite_index = spr_trashCan;
+}

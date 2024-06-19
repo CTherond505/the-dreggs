@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_nextDay(_day){
+	obj_task3.pillsTaken = 0;
 	if (_day == 2)
 	{
 		// change speed things once speed implimented

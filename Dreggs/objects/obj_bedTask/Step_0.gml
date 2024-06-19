@@ -6,6 +6,7 @@ if (obj_player.x < x + 128 and obj_player.x > x - 128)
 		{
 			obj_dayManager.endDay = true;
 			obj_blackScreen.fading = true;
+			obj_player.waiting = true;
 		}
 	}
 }

@@ -10,7 +10,7 @@ if (room == rm_house)
 }
 
 
-if (obj_dayManager.endDay)
+if (obj_dayManager.alarmRun)
 {
     global.pillsResetCounter = 0;
     global.task3_reset_day4 = false;
@@ -74,9 +74,11 @@ if (global.day == 6 || global.day == 7) {
 // Reset task3 on day 8
 if (global.day == 8) {
     // First reset
+	pillsNeeded = 4;
 	global.pillsTaken = false;
     if (!global.task3_reset_day8_1) {
         if (global.task3_complete) {
+			pillsTaken = 1;
             global.task3_complete = false;
             global.task3_completeGUI = false;
             global.task3_reset_day8_1 = true;
@@ -86,6 +88,7 @@ if (global.day == 8) {
     // Second reset (task3 needs to be completed twice)
     if (!global.task3_reset_day8_2) {
         if (global.task3_complete) {
+			pillsTaken = 2;
             global.task3_complete = false;
             global.task3_completeGUI = false;
             global.task3_reset_day8_2 = true;
@@ -94,7 +97,8 @@ if (global.day == 8) {
     }
     // Third reset (task3 needs to be completed again after task1)
     if (!global.task3_reset_day8_3) {
-        if (global.task1_complete) {
+        if (global.task3_complete) {
+			pillsTaken = 3;
             global.task3_complete = false;
             global.task3_completeGUI = false;
             global.task3_reset_day8_3 = true;
@@ -105,20 +109,28 @@ if (global.day == 8) {
 
 // Reset task3 on day 9 (needs to be completed 3 times)
 if (global.day == 9 && global.task3_reset_day9 < 3) {
+	pillsNeeded = 4;
     if (global.task3_complete) {
         global.task3_complete = false;
         global.task3_completeGUI = false;
         global.task3_reset_day9 += 1;
 		global.pillsTaken = false;
+		pillsTaken++;
     }
 }
 
 // Reset task3 on day 10 (needs to be completed 4 times)
 if (global.day == 10 && global.task3_reset_day10 < 4) {
+	pillsNeeded = 5;
     if (global.task3_complete) {
         global.task3_complete = false;
         global.task3_completeGUI = false;
         global.task3_reset_day10 += 1;
 		global.pillsTaken = false;
+		pillsTaken++;
     }
+}
+if (global.day == 11)
+{
+	pillsNeeded = 1;
 }

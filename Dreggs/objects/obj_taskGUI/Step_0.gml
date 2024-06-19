@@ -21,8 +21,8 @@ if (global.task3_completeGUI == true) {
 else if (global.task3_completeGUI == false) {
 	task3 = "Take your painkillers. ";
 }
-else if (global.task3_completeGUI == false && room == rm_street) {
-	task3 = "Take " + global.task3_reset_day10*-1 + "/3 painkillers. ";
+if (global.task3_completeGUI == false && room == rm_street) {
+	task3 = "Take painkillers (" + string(obj_task3.pillsTaken) + "/" + string(obj_task3.pillsNeeded) + ")";
 }
 if (global.task4_completeGUI == true) {
     task4 = "";

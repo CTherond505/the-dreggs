@@ -14,3 +14,5 @@ global.task3_reset_day10 = 0;
 if (room = rm_street){
 global.task3_complete = false
 global.task3_completeGUI = false}
+pillsTaken = 0;
+pillsNeeded = 0;

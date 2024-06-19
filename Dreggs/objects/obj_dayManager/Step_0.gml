@@ -21,6 +21,7 @@ if (endDay == true)
 		}
 		if (alarmRun = false and fadeOut == false)
 		{
+			// once screen is black (runs once)
 			scr_displayStory(global.day);
 			scr_nextDay(global.day);
 			alarm[0] = room_speed * 5;
@@ -29,6 +30,7 @@ if (endDay == true)
 	}
 	else if (obj_blackScreen.fading == true and faded == true)
 	{
+		// Once finished going to next day (runs once)
 		show_debug_message("finished");
 		fadeOut = false;
 		faded = false;
@@ -36,5 +38,6 @@ if (endDay == true)
 		obj_blackScreen.fading = false;
 		endDay = false;
 		obj_player.speedMultiplier = 1;
+		obj_player.waiting = false;
 	}
 }

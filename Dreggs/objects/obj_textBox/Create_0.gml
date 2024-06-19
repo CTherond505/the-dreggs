@@ -4,3 +4,6 @@ stringHeight = string_height(text);
 fading = false;
 depth = -3;
 image_alpha = 0;
+maintext = "";
+alarmran = 0;
+ran = false;

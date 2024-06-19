@@ -94,8 +94,7 @@ function scr_nextDay(_day){
 	}
 	if (_day == 12)
 	{
-		global.task1_complete = false;
-		global.task1_completeGUI = false;
+		obj_guiBackground.image_alpha = 0;
 	}
 	
 }

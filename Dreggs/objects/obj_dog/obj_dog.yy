@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_dog",
   "spriteId": {
-    "name": "spr_dog2",
-    "path": "sprites/spr_dog2/spr_dog2.yy",
+    "name": "spr_dog",
+    "path": "sprites/spr_dog/spr_dog.yy",
   },
   "solid": false,
   "visible": true,

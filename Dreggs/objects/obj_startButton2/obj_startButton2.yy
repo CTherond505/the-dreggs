@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_task5",
+  "name": "obj_startButton2",
   "spriteId": {
-    "name": "spr_bath",
-    "path": "sprites/spr_bath/spr_bath.yy",
+    "name": "spr_startButton",
+    "path": "sprites/spr_startButton/spr_startButton.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,13 +25,13 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":6,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":7,"eventType":6,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Tasks",
-    "path": "folders/Objects/Tasks.yy",
+    "name": "Menu",
+    "path": "folders/Objects/Menu.yy",
   },
 }

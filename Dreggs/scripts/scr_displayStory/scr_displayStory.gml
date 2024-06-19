@@ -78,36 +78,36 @@ function scr_displayStory(day){
 	}
 	else if (day == 8)
 	{
-				global.waitTimer = 180
+		global.waitTimer = 180
 		global.waitTimerReset = 180
 		obj_textBox.text = "You were late to the meeting and got fired,\n\nwith no money for rent you move\n\nto the streets";
 	}
 	else if (day == 9)
 	{
-				global.waitTimer = 180
+		global.waitTimer = 180
 		global.waitTimerReset = 180
 		obj_textBox.text = "The streets are much worse than home,\n\nbut atleast I have my painkillers";
 	}
 	else if (day == 10)
 	{
-				global.waitTimer = 180
+		global.waitTimer = 180
 		global.waitTimerReset = 180
 		obj_textBox.text = "There's nowhere near enough food here to\n\nfeed both me and my dog";
 	}
 	else if (day == 11)
 	{
-				global.waitTimer = 180
+		global.waitTimer = 180
 		global.waitTimerReset = 180
 		obj_textBox.text = "I'll miss him,\n\nthe painkillers will help";
 	}
 	else if (day == 12)
 	{
-				global.waitTimer = 180
+		global.waitTimer = 180
 		global.waitTimerReset = 180
 		obj_textBox.text = "Is life even worth living any more";
 	}
 	else if (day == 13)
 	{
-		obj_textBox.text = "Addiction can happen to anyone.\n\nFind information on how you can help below:\n\nhttps://bridge.salvationarmy.org.nz/#:~:text=The%20Salvation%20Army%20Bridge%20provides,other%20drugs%20in%20people%27s%20lives.";
+		obj_textBox.text = "Addiction can happen to anyone.\n\nFind information on how you can help below:\n\nhttps://bridge.salvationarmy.org.nz/\n\n#:~:text=The%20Salvation%20Army%20Bridge\n\n%20provides,other%20drugs%20in%20\n\npeople%27s%20lives.";
 	}
 }

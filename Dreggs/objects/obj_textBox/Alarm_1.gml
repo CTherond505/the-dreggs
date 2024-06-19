@@ -1,0 +1,2 @@
+text = maintext;
+ran = false;

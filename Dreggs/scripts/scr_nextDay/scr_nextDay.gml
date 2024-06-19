@@ -58,6 +58,7 @@ function scr_nextDay(_day){
 	if (_day == 8)
 	{
 		room_goto(rm_street);
+		global.pillsTaken = false;
 		global.task1_complete = false;
 		global.task1_completeGUI = false;
 		global.task2_complete = true;
@@ -71,6 +72,7 @@ function scr_nextDay(_day){
 	}
 	if (_day == 9)
 	{
+		global.pillsTaken = false;
 		global.task1_complete = false;
 		global.task1_completeGUI = false;
 		global.task2_complete = true;
@@ -84,11 +86,13 @@ function scr_nextDay(_day){
 	}
 	if (_day == 10)
 	{
+		global.pillsTaken = false;
 		global.task1_complete = false;
 		global.task1_completeGUI = false;
 	}
 	if (_day == 11)
 	{
+		global.pillsTaken = false;
 		global.task1_complete = false;
 		global.task1_completeGUI = false;
 	}

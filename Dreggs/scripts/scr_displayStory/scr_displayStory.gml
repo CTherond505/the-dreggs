@@ -21,7 +21,7 @@ function scr_displayStory(day){
 		global.task5_complete = false;
 		global.task5_completeGUI = false;
 		
-		obj_textBox.text = "BIG MEETING IN 7 MORE DAYS\n\nI should fix that leaky sink";
+		obj_textBox.text = "BIG MEETING IN A WEEK\n\nI should fix that leaky sink";
 	}
 	else if (day == 3)
 	{
@@ -45,7 +45,7 @@ function scr_displayStory(day){
 		global.waitTimer = 90;
 		global.pillsTaken = false;
 		global.waitTimerReset = 90;
-		obj_textBox.text = "BIG MEETING IN 3 DAYS\n\nthese pills are making quite a difference";
+		obj_textBox.text = "BIG MEETING IN 4 DAYS\n\nthese pills are making quite a difference";
 		global.task1_complete = false;
 		global.task1_completeGUI = false;
 		global.task2_complete = false;
@@ -62,13 +62,13 @@ function scr_displayStory(day){
 		global.pillsTaken = false;
 		global.waitTimerReset = 120;
 		global.waitTimer = 120;
-		obj_textBox.text = "BIG MEETING IN 2 DAYS\n\nI should take some more pills when i wake up";
+		obj_textBox.text = "BIG MEETING IN 3 DAYS\n\nI should take some more pills when I wake up";
 	}
 	else if (day == 6)
 	{
 		global.waitTimer = 150
 		global.waitTimerReset = 150
-		obj_textBox.text = "BIG MEETING TOMORROW MORNING\n\nI NEED to take my pills when i wake up";
+		obj_textBox.text = "BIG MEETING IN 2 DAYS\n\nI NEED to take my pills when I wake up";
 	}
 	else if (day == 7)
 	{

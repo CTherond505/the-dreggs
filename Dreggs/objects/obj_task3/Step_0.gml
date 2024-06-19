@@ -74,11 +74,13 @@ if (global.day == 6 || global.day == 7) {
 // Reset task3 on day 8
 if (global.day == 8) {
     // First reset
+	global.pillsTaken = false;
     if (!global.task3_reset_day8_1) {
         if (global.task3_complete) {
             global.task3_complete = false;
             global.task3_completeGUI = false;
             global.task3_reset_day8_1 = true;
+			global.pillsTaken = false;
         }
     }
     // Second reset (task3 needs to be completed twice)
@@ -87,6 +89,7 @@ if (global.day == 8) {
             global.task3_complete = false;
             global.task3_completeGUI = false;
             global.task3_reset_day8_2 = true;
+			global.pillsTaken = false;
         }
     }
     // Third reset (task3 needs to be completed again after task1)
@@ -95,7 +98,8 @@ if (global.day == 8) {
             global.task3_complete = false;
             global.task3_completeGUI = false;
             global.task3_reset_day8_3 = true;
-        }
+			global.pillsTaken = true;
+		}
     }
 }
 
@@ -105,6 +109,7 @@ if (global.day == 9 && global.task3_reset_day9 < 3) {
         global.task3_complete = false;
         global.task3_completeGUI = false;
         global.task3_reset_day9 += 1;
+		global.pillsTaken = false;
     }
 }
 
@@ -114,5 +119,6 @@ if (global.day == 10 && global.task3_reset_day10 < 4) {
         global.task3_complete = false;
         global.task3_completeGUI = false;
         global.task3_reset_day10 += 1;
+		global.pillsTaken = false;
     }
 }

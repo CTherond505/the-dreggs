@@ -20,7 +20,6 @@ else
 {
     task2Alert.x = 1000;
 }
-
 if (!global.task3_complete)
 {
     task3Alert.x = obj_task3.x;
